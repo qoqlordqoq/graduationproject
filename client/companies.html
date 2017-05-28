@@ -1,0 +1,35 @@
+<template name="companies">
+  <br><br/>
+  <h1>Manisa İlindeki Şirketler</h1>
+
+  <hr id="hr">
+
+  {{#each showCompany}}
+    <!--<ul class="dropDownMenu">
+
+      <li><a href="#">{{meslekGrubu}}</a>
+          <ul>
+            <li><a href="#">1. {{naceBaslik}}  (Nace Kodu: {{naceKodu}})</a>
+                <ul>
+                  <li class="getName"><a href="/generalTemplate">{{companyName}}</a></li>
+                </ul>
+            </li>
+          </ul>
+      </li>
+
+    </ul>-->
+    <ul class="dropDownMenu">
+
+      <li class="getName"><a href="/generalTemplate">{{companyName}}</a>
+          <ul>
+            <li><a href="#">{{meslekGrubu}} - {{naceBaslik}}  (Nace Kodu: {{naceKodu}})</a>
+            </li>
+          </ul>
+      </li>
+
+    </ul>
+
+  {{/each}}
+      {{> footer}}
+      {{> menu}}
+</template>

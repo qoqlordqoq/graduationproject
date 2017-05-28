@@ -1,0 +1,30 @@
+{
+  "name": "manisadakisirketler",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.18.0",
+    "bcrypt": "^1.0.2",
+    "express": "^4.15.3",
+    "meteor-node-stubs": "~0.2.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qoqlordqoq/manisadakisirketler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qoqlordqoq/manisadakisirketler/issues"
+  },
+  "homepage": "https://github.com/qoqlordqoq/manisadakisirketler#readme",
+  "description": "",
+  "engines": {
+    "node": "6.10.3"
+  }
+}

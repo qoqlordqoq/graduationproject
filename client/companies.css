@@ -1,0 +1,87 @@
+/* Menu General Styles */
+.menuBackground {
+  background: red;
+	/*background: grey;
+	text-align: center;*/ /* or change the value to left to align left*/
+}
+.dropDownMenu a {
+	color: #FFF;
+}
+.dropDownMenu,
+.dropDownMenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.dropDownMenu li {
+  	/*background-color: #f1f1f1;*/
+  	//background-image: linear-gradient(60deg, #1D1F20, #404348);
+  	background-image: linear-gradient(145deg, #1D1F20, #404348);
+	position: relative;
+}
+.dropDownMenu a {
+
+    /*color: #000;*/
+    color: #FFF;
+	padding: 10px 20px;
+	display: block;
+	text-decoration: none;
+}
+.dropDownMenu a:hover {
+  background-color: #555;
+  color:white;
+}
+
+
+/* Level 1 Drop Down Menu */
+.dropDownMenu > li {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	display: block;
+	text-align: left;
+  width: 400px;
+}
+.dropDownMenu > li:first-child {
+	margin-left: 0;
+}
+.dropDownMenu > li > a {}
+.dropDownMenu > li > a:hover {}
+
+
+
+/* Level 2 */
+.dropDownMenu > li > ul {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	text-align: left;
+	width: auto; /* change auto value with 200px if you want a bigger menu */
+  width: 600px;
+	display: none;
+	position: absolute;
+  left: 100%;
+	top: 0;
+	z-index: 9999999; /* if you have YouTube iframes, is good to have a bigger z-index so the video can appear above the video */
+}
+.dropDownMenu > li:hover > ul {
+	display: block;
+}
+.dropDownMenu ul li a {}
+.dropDownMenu ul li a:hover {}
+
+
+
+/* Level 3 */
+.dropDownMenu > li > ul > li > ul {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 300px;
+	text-align: left;
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	z-index: 9999999;
+}
+.dropDownMenu > li > ul > li:hover > ul {
+	display: block;
+}
+.dropDownMenu ul ul li {}
+.dropDownMenu ul ul li a {}
+.dropDownMenu ul ul li a:hover {}

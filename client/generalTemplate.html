@@ -1,0 +1,53 @@
+<template name="generalTemplate">
+
+  <br><br/>
+  {{#each companiesSearchedByNameForGeneral}}
+  <div xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:foaf="http://xmlns.com/foaf/0.1/"
+       xmlns:gr="http://purl.org/goodrelations/v1#"
+       xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+       xmlns:s="http://schema.org/">
+
+       <div typeof="gr:BusinessEntity">
+         <h1 property="gr:legalName" content="{{companyName}}">{{companyName}}</h1>
+       </div>
+
+       <br><br/>
+       <div id="info" typeof="gr:BusinessEntity">
+           <p id="infoP"><img src="ok.png" alt="icons"  id="cropIcons"><span id="infoPText"  property="gr:legalName"><span class="makeBold">   Şirket Adı:</span> {{companyName}}</span></p>
+           <p id="infoPKonum"><img src="konum.png" alt="icons"  id="cropIconsKonum"><span id="infoPTextKonum" property="s:streetAddress"><span class="makeBold">    Şirket Adresi:</span> {{companyAddress}}</span></p>
+           <p id="infoP"><img src="world.png" alt="icons"  id="cropIcons"><span id="infoPText" property="s:url"><span class="makeBold">    Şirket Sitesi: </span><a href="http://{{companyWebsite}}/" id="infoPLink">{{companyWebsite}}</a></span></p>
+           <p id="infoP"><img src="telefon.png" alt="icons"  id="cropIcons"><span id="infoPText" property="s:telephone"><span class="makeBold">    Şirket Telefonu:</span> <span id="telefonSpan">{{companyTelephone}}</span></span></p>
+       </div>
+       <br><br/>
+       <div id="info" typeof="gr:BusinessEntity">
+         <p id="infoP"><img src="ok.png" alt="icons"  id="cropIcons"><span id="infoPText"  property="gr:category"><span class="makeBold">   Meslek Grubu:</span> {{meslekGrubu}}</span></p>
+         <p id="infoP"><img src="ok.png" alt="icons"  id="cropIcons"><span id="infoPText"  property="gr:hasISICv4"><span class="makeBold">   Nace Kodu:</span> {{naceKodu}}</span></p>
+         <p id="infoP"><img src="ok.png" alt="icons"  id="cropIcons"><span id="infoPText"  property="gr:description"><span class="makeBold">   Nace Başlık:</span> {{naceBaslik}}</span></p>
+       </div>
+       <br><br/>
+       <div style="text-align:center">
+         <iframe src="{{googleHarita}}" width="600" height="450" frameborder="0" style="border:1" allowfullscreen id="harita"></iframe>
+         <iframe src="{{googleStreet}}" width="600" height="450" frameborder="0" style="border:1" allowfullscreen id="harita"></iframe>
+       </div>
+
+    <div about="#company" typeof="gr:BusinessEntity">
+      <div property="gr:legalName" content="{{companyName}}"></div>
+      <div rel="vcard:adr">
+        <div typeof="vcard:Address">
+          <div property="vcard:country-name" content="Türkiye"></div>
+          <div property="vcard:locality" content="Manisa"></div>
+          <div property="vcard:postal-code" content="45000"></div>
+          <div property="vcard:street-address" content="{{companyAddress}}"></div>
+        </div>
+      </div>
+      <div property="vcard:tel" content="{{companyTelephone}}"></div>
+      <div rel="foaf:depiction" resource="{{googleStreet}}">
+      </div>
+      <div rel="foaf:page" resource=""></div>
+    </div>
+  </div>
+  {{/each}}
+  {{> menu}}
+</template>

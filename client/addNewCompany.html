@@ -1,0 +1,50 @@
+<template name="addCompany">
+  <h1>Şirket Ekle</h1>
+  {{#if currentUser}}
+  <div class="addCompanyDiv">
+    <form>
+        <br>
+        <label><span class="makeBold">Şirket İsmi</span></label>
+        <br>
+        <input name="isim" type="text" id="isim"/>
+        <br>
+        <label><span class="makeBold">Şirket Adresi</span></label>
+        <br>
+        <textarea name="adres" rows="4" cols="50" id="adres" form="usrform"></textarea>
+        <br>
+        <label><span class="makeBold">Şirket Websitesi</span></label>
+        <br>
+        <input name="website" type="text" id="website"/>
+        <br>
+        <label><span class="makeBold">Şirket Telefonu</span></label>
+        <br>
+        <input ame="telefon" type="text" id="telefon"/>
+        <br>
+        <label><span class="makeBold">Şirket Nace Kodu</span></label>
+        <br>
+        <input name="nacekodu" type="text" id="nacekodu"/>
+        <br>
+        <label><span class="makeBold">Meslek Grubu</span></label>
+        <br>
+        <input name="meslekGrubu" type="text" id="meslekgrubu"/>
+        <br>
+        <label><span class="makeBold">Nace Başlık</span></label>
+        <br>
+        <textarea name="nacebaslik" rows="4" cols="50" id="nacebaslik" form="usrform"></textarea>
+        <br>
+        <label><span class="makeBold">Google Map</span></label>
+        <br>
+        <input name="googlemap" type="text" id="googlemaps"/>
+        <br>
+        <label><span class="makeBold">Google Street View</span></label>
+        <br>
+        <input name="googlestreetview" type="text" id="googlestreetview"/>
+
+        <input class="add-new-company" type="submit" value="Gönder" />
+    </form>
+  </div>
+    {{else}}
+      <p>Please Login for Adding New Company!</p>
+
+  {{/if}}
+</template>

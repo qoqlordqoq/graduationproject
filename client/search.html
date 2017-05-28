@@ -1,0 +1,70 @@
+<template name="search">
+  <br><br/>
+  <div id="left_div">
+    <form class="searchCompany">
+      <input id="searchButton" class="searchCompanies" type="text" name="namesearched" placeholder="   İsme Göre Arama.." />
+    </form>
+
+    <!--<h3>Bulunan Şirketler</h3>-->
+
+    {{#each companiesSearchedByName}}
+    <!--<ul class="dropDownMenu">
+
+      <li><a href="#">{{meslekGrubu}}</a>
+          <ul>
+            <li><a href="#">1. {{naceBaslik}}  (Nace Kodu: {{naceKodu}})</a>
+                <ul>
+                  <li class="getName"><a href="/generalTemplate">{{companyName}}</a></li>
+                </ul>
+            </li>
+          </ul>
+      </li>
+
+    </ul>-->
+    <ul class="dropDownMenu">
+
+      <li class="getName"><a href="/generalTemplate">{{companyName}}</a>
+          <ul>
+            <li><a href="#">{{meslekGrubu}} - {{naceBaslik}}  (Nace Kodu: {{naceKodu}})</a>
+            </li>
+          </ul>
+      </li>
+
+    </ul>
+    {{/each}}
+  </div>
+  <div id="right_div">
+    <form class="searchCompanyNace">
+      <input id="searchButton" class="searchCompanies" type="text" name="namesearched" placeholder="   Nace Kodu.." />
+    </form>
+
+    <!--<h3>Bulunan Şirketler</h3>-->
+
+    {{#each companiesSearchedByNaceCode}}
+    <!--<ul class="dropDownMenu">
+
+      <li><a href="#">{{meslekGrubu}}</a>
+          <ul>
+            <li><a href="#">1. {{naceBaslik}}  (Nace Kodu: {{naceKodu}})</a>
+                <ul>
+                  <li class="getName"><a href="/generalTemplate">{{companyName}}</a></li>
+                </ul>
+            </li>
+          </ul>
+      </li>
+
+    </ul>-->
+    <ul class="dropDownMenu">
+
+      <li class="getName"><a href="/generalTemplate">{{companyName}}</a>
+          <ul>
+            <li><a href="#">Nace Kodu: {{naceKodu}}</a>
+            </li>
+          </ul>
+      </li>
+
+    </ul>
+    {{/each}}
+  </div>
+  {{> menu}}
+</template>

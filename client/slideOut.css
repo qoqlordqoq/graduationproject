@@ -1,0 +1,148 @@
+#white{
+  color: #fff!important;
+  text-decoration: none;
+}
+
+.mainPicture{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -999;
+}
+.slideOutFooter{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.slideOutCenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+
+.slideOutH2{
+  margin: 1em 0 0.5em 0;
+  font-weight: normal;
+  position: relative;
+  text-shadow: 0 -1px rgba(0,0,0,0.6);
+  font-size: 28px;
+  line-height: 40px;
+  background: #353a42;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  color: white;
+  border-radius: 0 10px 0 10px;
+  box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+  font-family: 'Sansita', sans-serif;
+}
+.FacebookLogin {
+  overflow: visible;
+  float: right;
+  list-style: none;
+  text-decoration: none;
+  position: absolute;
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+.FacebookLogin a{
+  /*color: #e6e6e6;*/
+  color: #FFF;
+  text-shadow: 0px 0px 10px #000000;
+  text-decoration: none;
+}
+.menu-section {
+  margin: 25px 0;
+}
+
+.menu-section-title {
+  text-transform: uppercase;
+  color: #85888d;
+  font-weight: 200;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  margin:0;
+}
+
+.menu-section-list {
+  padding:0;
+  margin: 10px 0;
+  list-style:none;
+}
+
+.menu-section-list a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px 20px;
+}
+
+.menu-section-list a:hover {
+  background-color: #595959;
+}
+
+/**
+ * hamburger
+ */
+ #btn-hamburger{
+   width: 64px;
+   height: 64px;
+ }
+.btn-hamburger {
+  border: none;
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  outline:none;
+  background: url('menuIcon7.png') no-repeat center;
+  width: 64px;
+  height: 64px;
+}
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  /*overflow-y: scroll;*/
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+  background-color: #1D1F20;
+  background-image: linear-gradient(145deg, #1D1F20, #404348);
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #e6e6e6; /* A background-color is required #c0392b;*/
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}

@@ -1,0 +1,68 @@
+<template name="iletisim">
+  <br><br/>
+  <h1>İletişim</h1>
+  <br><br/>
+  {{> iletisimharita}}
+  <br><br/>
+  {{> iletisiminfo}}
+  <br><br/>
+  {{> comment}}
+  <br><br/>
+  {{> footer}}
+  {{> menu}}
+
+</template>
+
+<template name="iletisiminfo">
+  <div id="info">
+      <p id="infoPKonum"><img src="konum.png" alt="icons"  id="cropIconsKonum"><span id="infoPTextKonum"><span class="makeBold">    Şirket Adresi:</span> Peker Mahallesi 1712. Sokak No:7/3 Şehzadeler / MANİSA </span></p>
+      <p id="infoP"><img src="world.png" alt="icons"  id="cropIcons"><span id="infoPText"><span class="makeBold">    Şirket Sitesi: </span><a href="http://localhost:3000/" id="infoPLink">localhost:3000</a></span></p>
+      <p id="infoP"><img src="telefon.png" alt="icons"  id="cropIcons"><span id="infoPText"><span class="makeBold">    Şirket Telefonu:</span> <span id="telefonSpan">(0554) 907 75 55</span></span></p>
+  </div>
+</template>
+
+<template name="iletisimharita">
+  <div id="info">
+    <p>İletisim sayfasına hoşgeldiniz.</p>
+  </div>
+</template>
+
+<template name="comment">
+  <h1>Yorum Yaz</h1>
+  {{#if currentUser}}
+    <form>
+        <label  id="comment"><span class="makeBold">İsim</span></label>
+        <br>
+        <input class="place" name="isim" type="text" id="isim" placeholder="İsim" />
+        <br>
+        <label id="comment"><span class="makeBold">Soyisim</span></label>
+        <br>
+        <input class="place" name="soyisim" type="text" id="soyisim" placeholder="Soyisim" />
+        <br>
+        <label id="comment" ><span class="makeBold">Yorumunuz</span></label>
+        <br>
+        <textarea name="yorum" rows="4" cols="50" id="yorum" form="usrform" placeholder="Yorumunuz"></textarea>
+        <input class="add-comment" type="submit" value="Gönder" />
+    </form>
+    {{else}}
+      <p>Please Login for Adding New Comment!</p>
+  {{/if}}
+  <hr id="hr">
+
+  <div id="info">
+    <h3>Yorumlar</h3>
+    <ul id="comment">
+      {{#each showComment}}
+        <!--<li id="comment"><span class="makeBold">İsim: </span>{{isim}} <span class="makeBold"><br><br/>Soyisim: </span>{{soyisim}}<span class="makeBold"><br><br/>Yorum: </span>{{yorum}}{{#if currentUser}}<button class="delete-comment" type="button">Yorum Sil</button>{{/if}}</li>-->
+        <li id="comment"><span class="makeBold">{{isim}} {{soyisim}} </span>{{createdAt}}</li>
+        <p id="comment">{{yorum}}</p>
+
+        {{#if isAdmin}}<button id="ali" class="delete-comment" type="button">Yorumu Sil</button>{{/if}}
+
+        <!--iX2mwvmdAWHMvtdeM-->
+        <hr id="hr">
+      {{/each}}
+    </ul>
+  </div>
+
+</template>

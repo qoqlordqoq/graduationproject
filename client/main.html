@@ -1,0 +1,92 @@
+<head>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <title>Graduation Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--<meta http-equiv="cleartype" content="on">-->
+  <!--<meta name="MobileOptimized" content="320">-->
+  <!--<meta name="HandheldFriendly" content="True">-->
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
+</head>
+<template name="layout">
+    {{> yield}}
+</template>
+
+<template name="slideout">
+  <nav id="menu">
+    <h2 class="slideOutH2">Menü</h2>
+    <div class="menu-section">
+      <h3 class="menu-section-title">İçerikler</h3>
+      <ul class="menu-section-list">
+        <li><a href="/companies" target="_blank">Şirketler</a></li>
+        <li><a href="/search" target="_blank">Şirket Ara</a></li>
+        <li><a href="/galeri" target="_blank">Galeri</a></li>
+        <li><a href="/hakkimizda" target="_blank">Hakkımızda</a></li>
+        <li><a href="/iletisim" target="_blank">İletişim</a></li>
+        <!--<li><a href="/addCompany" target="_blank">Add new Company</a></li>-->
+      </ul>
+    </div>
+  </nav>
+
+  <main id="panel">
+    <header>
+      <div id="btn-hamburger">
+        <button class="btn-hamburger toggle-button"></button>
+      </div>
+    </header>
+    <li class="FacebookLogin"><a href="#">{{> loginButtons align="right"}}</a></li>
+
+    <img class="mainPicture" src="backgroundImage1.jpg">
+
+    <div class="slideOutFooter">
+      {{> mainFooter}}
+    </div>
+  </main>
+
+</template>
+
+<template name="footer">
+  <footer class="footer-container footer-teal footer-center footer-margin-top">
+    <!--<p>Find me on social media.</p>-->
+    <a href="https://www.facebook.com/alimrankorkmaz" target="_blank" id="white"><i class="fa fa-facebook-official footer-hover-text-indigo footer-large"></i></a>
+    <a href="https://www.instagram.com/alimrankorkmaz/" target="_blank" id="white"><i class="fa fa-instagram footer-hover-text-purple footer-large"></i></a>
+    <a href="https://www.snapchat.com/add/qoqlordqoq" target="_blank" id="white"><i class="fa fa-snapchat footer-hover-text-yellow footer-large"></i></a>
+    <a href="https://tr.pinterest.com/aliimrankorkmaz/" target="_blank" id="white"><i class="fa fa-pinterest-p footer-hover-text-red footer-large"></i></a>
+    <a href="https://twitter.com/AlimranKORKMAZ" target="_blank" id="white"><i class="fa fa-twitter footer-hover-text-light-blue footer-large"></i></a>
+    <a href="https://www.linkedin.com/in/ali-imran-korkmaz-2b562950/" target="_blank" id="white"><i class="fa fa-linkedin footer-hover-text-indigo footer-large"></i></a>
+    <p>Powered by Ali İmran Korkmaz</p>
+    <a href="/iletisim" target="_blank" id="white" class="menum">Bize Mesaj Gönderin!</a>
+  </footer>
+</template>
+
+<template name="goUpButton">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow60.js"></script>
+</template>
+
+<template name="menu">
+    <ul class="menum" id="menuCss">
+      <li class="menum"><a href="/" id="menuYazi" class="menum">Anasayfa</a></li>
+      <li class="menum"><a href="/companies" id="menuYazi2" class="menum">Şirketler</a></li>
+      <li class="menum"><a href="/search" id="menuYazi3" class="menum">Şirket Ara</a></li>
+      <li class="menum"><a href="/galeri" id="menuYazi4" class="menum">Galeri</a></li>
+      <li class="menum"><a href="/hakkimizda" id="menuYazi5" class="menum">Hakkımızda</a></li>
+      <li class="menum"><a href="/iletisim" id="menuYazi7" class="menum">İletişim</a></li>
+      <span class="loginRight"><li class="menum"><a href="#" id="menuYazi6" class="facebookMenuButtonBlack"><span></span>{{> loginButtons align="right"}}</a></li></span>
+      <!--<span class="loginRight"><li class="menum"><form class="searchCompany"><input id="searchButton" class="searchCompaniesForMenu" type="text" name="namesearched" placeholder="   İsme Göre Arama.." /></form></li></span>-->
+    </ul>
+</template>
+
+<template name="mainFooter">
+  <footer class="footer-container footer-center footer-margin-top">
+    <a href="https://www.facebook.com/alimrankorkmaz" target="_blank" id="white"><i class="fa fa-facebook-official footer-hover-text-indigo footer-large"></i></a>
+    <a href="https://www.instagram.com/alimrankorkmaz/" target="_blank" id="white"><i class="fa fa-instagram footer-hover-text-purple footer-large"></i></a>
+    <a href="https://www.snapchat.com/add/qoqlordqoq" target="_blank" id="white"><i class="fa fa-snapchat footer-hover-text-yellow footer-large"></i></a>
+    <a href="https://tr.pinterest.com/aliimrankorkmaz/" target="_blank" id="white"><i class="fa fa-pinterest-p footer-hover-text-red footer-large"></i></a>
+    <a href="https://twitter.com/AlimranKORKMAZ" target="_blank" id="white"><i class="fa fa-twitter footer-hover-text-light-blue footer-large"></i></a>
+    <a href="https://www.linkedin.com/in/ali-imran-korkmaz-2b562950/" target="_blank" id="white"><i class="fa fa-linkedin footer-hover-text-indigo footer-large"></i></a>
+    <p id="white">Powered by Ali İmran Korkmaz</p>
+  </footer>
+</template>
